@@ -37,6 +37,7 @@ def draw_cat_plot():
     return fig
 
 
+
 # Draw Heat Map
 def draw_heat_map():
     # Clean the data
@@ -52,13 +53,10 @@ def draw_heat_map():
     # Generate a mask for the upper triangle
     mask = np.triu(np.ones_like(corr, dtype=bool))
 
-
-
     # Set up the matplotlib figure
     fig, ax = plt.subplots(figsize=(11, 9))
 
     # Draw the heatmap with 'sns.heatmap()'
-
     sns.heatmap(corr, 
             mask=mask, 
             vmin=-0.16, 
